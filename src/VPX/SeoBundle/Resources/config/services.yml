@@ -1,0 +1,14 @@
+parameters:
+    vpx_seo.page.class: VPX\SeoBundle\Service\SeoPage
+    vpx_seo.page_twig_extension.class: VPX\SeoBundle\Twig\Extension\SeoPageExtension
+
+services:
+    vpx.seo_page:
+        class: %vpx_seo.page.class%
+        arguments: [%vpx_seo.additional_title%, %vpx_seo.delimiter%]
+
+    vpx.seo_page.twig_extension:
+        class: %vpx_seo.page_twig_extension.class%
+        arguments: [@vpx.seo_page]
+        tags:
+            - name: twig.extension
