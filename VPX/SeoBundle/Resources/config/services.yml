@@ -5,10 +5,10 @@ parameters:
 services:
     vpx.seo_page:
         class: %vpx_seo.page.class%
-        arguments: [%vpx_seo.additional_title%, %vpx_seo.delimiter%]
+        arguments: ["NetBarrister", "|"]
 
     vpx.seo_page.twig_extension:
         class: %vpx_seo.page_twig_extension.class%
-        arguments: [@vpx.seo_page]
+        arguments: ["@vpx.seo_page"]
         tags:
             - name: twig.extension

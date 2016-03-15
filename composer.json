@@ -11,9 +11,10 @@
   ],
   "autoload": {
     "psr-0": {
-      "\\": "src"
+      "VPX\\SeoBundle": ""
     }
   },
+  "target-dir": "VPX/SeoBundle",
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.6",
