@@ -18,6 +18,7 @@ class Configuration implements ConfigurationInterface
         $rootNode    = $treeBuilder->root('vpx_seo');
 
         $rootNode->children()
+            ->scalarNode('default_title')->isRequired()->cannotBeEmpty()->end()
             ->scalarNode('additional_title')->defaultValue(null)->cannotBeEmpty()->end()
             ->scalarNode('delimiter')->defaultValue('|')->cannotBeEmpty()->end()
             ->end();

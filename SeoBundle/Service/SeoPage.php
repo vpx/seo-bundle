@@ -14,6 +14,11 @@ class SeoPage implements SeoPageInterface
     /**
      * @var string
      */
+    protected $defaultTitle;
+
+    /**
+     * @var string
+     */
     protected $delimiter;
 
     /**
@@ -52,11 +57,13 @@ class SeoPage implements SeoPageInterface
     protected $metaTags;
 
     /**
+     * @param $defaultTitle
      * @param string $additionalTitle
      * @param string $delimiter
      */
-    public function __construct($additionalTitle, $delimiter)
+    public function __construct($defaultTitle, $additionalTitle = null, $delimiter = '|')
     {
+        $this->defaultTitle    = $defaultTitle;
         $this->additionalTitle = $additionalTitle;
         $this->delimiter       = $delimiter;
 
@@ -70,7 +77,7 @@ class SeoPage implements SeoPageInterface
      */
     public function getTitle()
     {
-        return sprintf('%s%s', $this->title, $this->getAdditionalTitle());
+        return sprintf('%s%s', $this->title ? $this->title : $this->defaultTitle, $this->getAdditionalTitle());
     }
 
     /**

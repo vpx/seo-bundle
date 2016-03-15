@@ -22,6 +22,7 @@ class VPXSeoExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yml');
 
+        $container->setParameter('vpx_seo.default_title', $configs['default_title']);
         $container->setParameter('vpx_seo.additional_title', $configs['additional_title']);
         $container->setParameter('vpx_seo.delimiter', $configs['delimiter']);
     }
