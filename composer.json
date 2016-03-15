@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-0": {
-      "VPX\\SeoBundle": ""
+      "VPX\\SeoBundle": "VPX/"
     }
   },
   "target-dir": "VPX/SeoBundle",
