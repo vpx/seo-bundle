@@ -1,6 +1,7 @@
 {
   "name": "vpx/seo-bundle",
   "license": "MIT",
+  "keywords": ["symfony", "seo", "meta"],
   "description": "The bundle provide some features for SEO optimization",
   "type": "symfony-bundle",
   "authors": [
