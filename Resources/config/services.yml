@@ -4,11 +4,11 @@ parameters:
 
 services:
     vpx.seo_page:
-        class: %vpx_seo.page.class%
-        arguments: [%vpx_seo.default_title%, %vpx_seo.additional_title%, %vpx_seo.delimiter%]
+        class: '%vpx_seo.page.class%'
+        arguments: ['%vpx_seo.default_title%', '%vpx_seo.additional_title%', '%vpx_seo.delimiter%']
 
     vpx.seo_page.twig_extension:
-        class: %vpx_seo.page_twig_extension.class%
-        arguments: ["@vpx.seo_page"]
+        class: '%vpx_seo.page_twig_extension.class%'
+        arguments: ['@vpx.seo_page']
         tags:
             - name: twig.extension

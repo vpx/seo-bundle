@@ -18,8 +18,8 @@
   "target-dir": "VPX/SeoBundle",
   "minimum-stability": "stable",
   "require": {
-    "php": ">=5.6",
-    "symfony/framework-bundle": "~2|~3",
+    "php": ">=7.0",
+    "symfony/framework-bundle": "~3.1",
     "twig/twig": "~1.12,>=1.12.3"
   },
   "require-dev": {
